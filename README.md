@@ -2,7 +2,7 @@
 
 Syntax highlighting and IntelliSense for [twined-components](https://github.com/lowfront/twined-components).
 
-![Syntax highlighting in action](demo.png)
+![Syntax highlighting in action](https://raw.githubusercontent.com/lowfront/vscode-twined-components/master/demo.png)
 
 ## Usage
 
