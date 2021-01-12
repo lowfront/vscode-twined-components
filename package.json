@@ -1,0 +1,46 @@
+{
+  "name": "vscode-twined-components",
+  "displayName": "vscode-twined-components",
+  "description": "Syntax highlighting for twined-components",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "publisher": "lowfront",
+  "categories": [
+    "Programming Languages"
+  ],
+  "repository": {
+    "type": "git"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "source.css.twined",
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "source.css.twined",
+        "scopeName": "source.css.twined",
+        "path": "./syntaxes/css.styled.json"
+      },
+      {
+        "injectTo": [
+          "source.js",
+          "source.ts",
+          "source.jsx",
+          "source.js.jsx",
+          "source.tsx"
+        ],
+        "scopeName": "twined",
+        "path": "./syntaxes/twined.tmLanguage.json",
+        "embeddedLanguages": {
+          "source.css.scss": "css",
+          "meta.embedded.line.ts": "typescript"
+        }
+      }
+    ]
+  }
+}

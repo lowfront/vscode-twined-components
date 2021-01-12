@@ -1,0 +1,26 @@
+{
+	"fileTypes": [],
+	"injectionSelector": "L:source -comment -string",
+	"patterns": [
+		{
+			"contentName": "source.css.scss",
+			"begin": "twined\\.[_$[:alpha:]][_$[:alnum:]]*?`",
+			"end": "(`)",
+			"patterns": [
+				{
+					"include": "string"
+				}
+      ]
+		},
+		{
+			"begin": "(?<=\\.css)(`)",
+			"end": "\\s*?(`)",
+			"patterns": [
+				{
+					"include": "source.css.twined"
+				}
+      ]
+		}
+	],
+	"scopeName": "twined"
+}
