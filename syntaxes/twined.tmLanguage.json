@@ -4,8 +4,18 @@
 	"patterns": [
 		{
 			"contentName": "source.css.scss",
-			"begin": "twined\\.[_$[:alpha:]][_$[:alnum:]]*?`",
-			"end": "(`)",
+			"begin": "twined\\.[_$[:alpha:]][_$[:alnum:]]*?(`)",
+			"beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.string.template.begin.js string.template.js"
+        }
+      },
+			"end": "\\s*?(`)",
+			"endCaptures": {
+        "1": {
+          "name": "punctuation.definition.string.template.begin.js string.template.js"
+        }
+      },
 			"patterns": [
 				{
 					"include": "string"
@@ -14,7 +24,17 @@
 		},
 		{
 			"begin": "(?<=\\.css)(`)",
+			"beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.string.template.begin.js string.template.js"
+        }
+      },
 			"end": "\\s*?(`)",
+			"endCaptures": {
+        "1": {
+          "name": "punctuation.definition.string.template.begin.js string.template.js"
+        }
+      },
 			"patterns": [
 				{
 					"include": "source.css.twined"
