@@ -8,7 +8,7 @@ Syntax highlighting and IntelliSense for [twined-components](https://github.com/
 
 The twined-components extension adds highlighting and IntelliSense for twined-component template strings in JavaScript and TypeScript.
 
-## With tailwindcss-intellisense
+## With Tailwind CSS IntelliSense
 Setting the `experimental.classRegex` property of [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) as below supports Syntax highlighting and IntelliSense for classnames.
 
 ```json
@@ -22,3 +22,6 @@ Setting the `experimental.classRegex` property of [Tailwind CSS IntelliSense](ht
   ...
 }
 ```
+
+### Caution
+For `Tailwind CSS IntelliSense` to work, the `tailwind.config.js` file must be present at the project root directory. If it does not work, create `tailwind.config.js` as shown in the [document](https://tailwindcss.com/docs/configuration) and restart Extension Host (`Ctrl + p` > Developer: Restart Extension Host). Check [here](https://github.com/tailwindlabs/tailwindcss-intellisense#troubleshooting) for more information.
